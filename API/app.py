@@ -1,7 +1,7 @@
 from flask import Flask, request, Response, send_file
 from flask_restful import Resource, Api
 
-from assess_image import assess_image
+from AI.assess_image import assess_image
 
 
 app = Flask(__name__)
@@ -24,7 +24,7 @@ class Output(Resource):
 
   def post(self):
 
-    return send_file("output_image.jpg", as_attachment = True)
+    return send_file("AI/process_data/output_image.jpg", as_attachment = True)
 
 
 
@@ -32,7 +32,7 @@ class Report(Resource):
 
   def post(self):
 
-    return send_file("report.json", as_attachment = True)
+    return send_file("AI/process_data/report.json", as_attachment = True)
   
 
 
