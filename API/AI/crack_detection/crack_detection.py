@@ -1,1 +1,2 @@
-
+def detect():
+  pass
